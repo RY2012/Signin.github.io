@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #06111c;
+    color: white;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.subtitle2 {
+    font-size: 35px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.section {
+    position: absolute;
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.animation {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-family: sans-serif;
+    width: max-content;
+}
+
+
+.graphic {
+    width: 50px;
+    height: 300px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    height: 15%;
+    background-color: #FCD63F;
+    position: absolute;
+    bottom: 125px;
+}
+#none:checked{
+  animation: move-up 2s 1s linear 1 normal none;
+}
+
+
+#forwards:checked {
+    animation: move-up 2s 1s linear 1 normal forwards;
+}
+
+#backwards:checked {
+    animation: move-up 2s 1s linear 1 normal backwards;
+}
+
+#both:checked {
+    animation: move-up 2s 1s linear 1 normal both;
+}
+
+.animation {
+    height: auto;
+}
+
+@keyframes move-up {
+    0% {
+        /*bottom: 0;*/
+        transform: translateY(125px);
+    }
+    100% {
+        /*bottom: 250px;*/
+        transform: translateY(-125px);
+    }
+}
+
+
+</style>
+</head>
+<body>
+    div class="section" id="eighth">
+    <div class="subtitle2">
+      animation-fill-mode
+    </div>
+    <div class="row" id="animation6">
+      <div class="collumn">
+        <div class="animation">
+          <div class="graphic">
+            <input id="none" type="checkbox"></input>
+          </div>
+        </div>
+        <p>none</p>
+      </div>
+      <div class="collumn">
+        <div class="animation">
+          <div class="graphic">
+            <input id="forwards" type="checkbox"></input>
+          </div>
+        </div>
+        <p>forwards</p>
+      </div>
+      <div class="collumn">
+        <div class="animation">
+          <div class="graphic">
+            <input id="backwards" type="checkbox"></input>
+          </div>
+        </div>
+        <p>backwards</p>
+      </div>
+      <div class="collumn">
+        <div class="animation">
+          <div class="graphic">
+            <input id="both" type="checkbox"></input>
+          </div>
+        </div>
+        <p>both</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>

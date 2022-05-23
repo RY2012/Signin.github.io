@@ -1,0 +1,79 @@
+
+SQL*Plus: Release 11.2.0.2.0 Production on Fri May 6 23:46:08 2022
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> create table stu(sname char(5), rollno number(5), marks number(5), result char(5));
+
+Table created.
+
+SQL> insert into stu values('Rahul', 1, 98, 'pass')
+  2
+SQL> insert into stu values('Rahul', 1, 98, 'pass');
+
+1 row created.
+
+SQL> insert into stu values('Rohan', 2, 98, 'pass');
+
+1 row created.
+
+SQL> insert into stu values('Roy', 2, 91, 'pass');
+
+1 row created.
+
+SQL> insert into stu values('Rani', 4, 97, 'pass');
+
+1 row created.
+
+SQL> insert into stu values('Raju', 5, 99, 'pass');
+
+1 row created.
+
+SQL> insert into stu values('Raju', 6, 99, 'pass');
+
+1 row created.
+
+SQL> desc student1
+ERROR:
+ORA-04043: object student1 does not exist
+
+
+SQL> select * from stu
+  2  select * from stu;
+select * from stu
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> select * from stu;
+
+SNAME     ROLLNO      MARKS RESUL
+----- ---------- ---------- -----
+Rahul          1         98 pass
+Rohan          2         98 pass
+Roy            2         91 pass
+Rani           4         97 pass
+Raju           5         99 pass
+Raju           6         99 pass
+
+6 rows selected.
+
+SQL> desc stu;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ SNAME                                              CHAR(5)
+ ROLLNO                                             NUMBER(5)
+ MARKS                                              NUMBER(5)
+ RESULT                                             CHAR(5)
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+

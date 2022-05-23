@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script>   
+$(document).ready(function(){  
+    $("#flip").click(function(){  
+        $("#panel").slideToggle("infinite");
+        $("#pane2").slideToggle("5000");
+        $("#pane3").slideToggle("10000");
+    });  
+});  
+</script>  
+ <style>   
+#panel, #flip {  
+    padding: 5px;  
+    text-align: center;  
+    background-color: orangered;  
+    border: solid 1px #c3c3c3;  
+}  
+#pane1{  
+    padding: 50px;  
+} 
+img{
+    height: 50px;
+    width: 50px;
+} 
+
+#pane2{  
+    padding: 5px;  
+    text-align: center;  
+    background-color: #00FFFF;  
+    border: solid 1px #c3c3c3;  
+}  
+
+#pane3 {  
+    padding: 5px;  
+    text-align: center;  
+    background-color: yellowgreen;  
+    border: solid 1px #c3c3c3;  
+}  
+
+
+</style>  
+</head>  
+<body>  
+<div id="flip">Click to slide up panel</div>  
+<div id="panel"><img src="Gy1.html"></div>
+<div id="pane2"><img src="Gy2.html"></div>
+<div id="pane3"><img src="Gy1.html"></div> 
+</body>  
+</html>  

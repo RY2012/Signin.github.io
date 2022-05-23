@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<style>
+
+#R1{
+    text-align: center;
+    background: radial-gradient(at 10% 107%, pink 1%, crimson 100%, palevioletred 99%,plum 0%,lightpink 30%);
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    bottom: 56%;
+   
+}
+
+
+#E1{
+    text-align: center;
+    bottom: 48%;
+    position: absolute;
+    right: 30%;
+    color: aliceblue;
+    font-weight: lighter;
+    font-size: large;
+    line-break: normal;
+    letter-spacing: 5px;
+}
+
+div{
+    background:radial-gradient(at 10% 107%, pink 1%, crimson 100%, palevioletred 99%,plum 0%,lightpink 30%); ;
+    animation: AE 2s ease infinite;
+
+}
+
+@keyframes AE{
+0%{
+    background: plum;
+}
+
+    25%{
+       background: palevioletred;
+    }
+
+    50%{
+      background: crimson;
+    }
+
+    75%{
+        background: lightcoral;
+    }
+
+    100%{
+        background: lightpink;
+    }
+}
+
+#E1{
+    animation-name: DE;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+@keyframes DE{
+    from{ top:0px;}
+
+    to{ top: 30px;}
+}
+
+#R2{
+    text-align: center;
+    position: absolute;
+    right: 36%;
+    bottom: 68%;
+    color: aliceblue;
+    background: radial-gradient(at 10% 107%, pink 1%, crimson 100%, palevioletred 99%,plum 0%,lightpink 30%);
+    font-weight: lighter;
+    width: 13%;
+    height: 25px;
+}
+
+#R3{
+    text-align: center;
+    position: absolute;
+    right: 48%;
+    bottom: 68%;
+    color: aliceblue;
+    background: radial-gradient(at 10% 107%, pink 1%, crimson 100%, palevioletred 99%,plum 0%,lightpink 30%);
+    font-weight: lighter;
+    width: 13%;
+    height: 25px;
+}
+
+#R4{
+    text-align: center;
+    position: absolute;
+    bottom: 58%;
+    color: aliceblue;
+    right:44% ;
+} 
+
+</style>
+</head>
+<body>
+<div>
+<div id="R1">
+
+<p id="E1">Pure CSS Gradient Background Animation!</p>
+</div>
+
+
+<button id="R2">FULL SCREEN </button>  <button id="R3">SOURCE CODE</button>
+
+<p id="R4">&ndash;&ndash; Pen by Manuel Pinto &ndash;&ndash;</p>
+
+</div>
+
+</body>
+</html>

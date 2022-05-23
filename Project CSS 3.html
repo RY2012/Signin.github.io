@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(GG1.jpg);
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+
+}
+
+nav.logo{
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+nav:hover{
+    color: aqua;
+}
+
+.content{
+    margin-top: 9%;
+    margin-left: 9%;
+    color: blue;
+}
+
+.content h1{
+    font-size: 120px;
+    line-height: 140px;
+    font-weight: 600;
+}
+
+.content p{
+    max-width: 500px;
+    line-height: 28px;
+}
+
+.slide-effect{
+    animation: slide-effect 1s linear forwards;
+}
+
+@keyframes slide-effect{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="header">
+
+    <nav>
+<div class="logo">
+    <span>Wear Me</span>
+</div>
+<ul>
+    <li><a href="">Home</a></li>
+
+    <li><a href="">About</a></li>
+
+    <li><a href="">Service</a></li>
+
+    <li><a href="">Contact</a></li>
+
+    <li><a href="">Portfolio</a></li>
+</ul>
+
+    </nav>
+
+<div class="content"></div>
+<h1 class="slide-left">SMART WATCH</h1>
+
+<p class="slide-left">This Is The Smart Watch From Our Company.We Are Making A Huge Collection!!</p>
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #06111c;
+    color: white;
+}
+
+.section {
+    position: absolute;
+    transform: scale(1) translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.operation{
+  font-size: 45px;
+  width: 25px;
+  margin: 0;
+}
+
+.animation {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    width: 150px;
+}
+
+p {
+    font-family: sans-serif;
+    width: max-content;
+}
+
+
+.code {
+    align-items: baseline;
+    margin: 0 30px;
+}
+
+.code p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.code .selector {
+    margin-left: -15px;
+}
+
+#transition4 ul {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+#transition4 ul li a {
+    color: #FCD63F;
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    position: relative;
+}
+
+#transition4 #animated ul li a {
+    transition: all 0.5s;
+}
+
+#transition4 #after a, #transition4 #static a:hover, #transition4 #animated a:hover {
+    background-color: #FCD63F;
+    color: #06111c;
+}
+
+#transition4 a:before {
+    content: "";
+    position: absolute;
+    bottom: 0px; /*for transform version*/
+    left: 0px; /*for transform version*/
+    /*bottom: 12px;
+    left: 12px;*/
+    width: 12px;
+    height: 12px;
+    border: 3px solid #FCD63F;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transform: translate(12px, -12px); /*for transform version*/
+}
+
+#transition4 #animated a:before {
+    transition: all 0.3s;
+}
+
+#transition4 #after a:before, #transition4 #static a:hover:before, #transition4 #animated a:hover:before {
+    opacity: 1;
+    /*bottom: -8px;
+    left: -8px;*/
+    transform: translate(-8px, 8px); /*for transform version*/
+}
+
+#transition4 a:after {
+    content: "";
+    position: absolute;
+    *top: 12px;
+    right: 12px;
+    top: 0px; 
+    right: 0px; 
+    width: 12px;
+    height: 12px;
+    border: 3px solid #FCD63F;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transform: translate(-12px, 12px); /*for transform version*/
+}
+
+#transition4 #animated a:after {
+    transition: all 0.3s;
+}
+
+#transition4 #after a:after, #transition4 #static a:hover:after, #transition4 #animated a:hover:after {
+    opacity: 1;
+    /*top: -8px;
+    right: -8px;*/
+    transform: translate(8px, -8px); /*for transform version*/
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="section" id="fourth">
+        <div class="row" id="transition4">
+          <div class="collumn">
+            <div class="animation">
+              <ul>
+                <li><a href="#">home</a></li>
+              </ul>
+            </div>
+            <p> initial </p>
+          </div>
+          <div class="collumn operation">
+            <p> + </p>
+          </div>
+          <div class="collumn">
+            <div class="animation" id="after">
+              <ul>
+                <li><a href="#">home</a></li>
+              </ul>
+            </div>
+            <p> final </p>
+          </div>
+          <div class="collumn operation">
+            <p> = </p>
+          </div>
+          <div class="collumn">
+            <div class="animation" id="static">
+              <ul>
+                <li><a href="#">home</a></li>
+              </ul>
+            </div>
+            <p> static </p>
+          </div>
+        </div>
+        <div class="row" id="transition4">
+          <div class="collumn">
+            <div class="animation" id="static">
+              <ul>
+                <li><a href="#">home</a></li>
+              </ul>
+            </div>
+            <p> static </p>
+          </div>
+          <div class="collumn operation">
+            <p> + </p>
+          </div>
+          
+          <div class="collumn code">
+            <p>transition-property: all;</p>
+            <p>transition-duration: 0.5s;</p>
+            <p>transition-timing-function: linear;</p>
+            <p>transition-delay: 0.5s;</p>
+          </div>
+          <div class="collumn operation">
+            <p> = </p>
+          </div>
+          <div class="collumn">
+            <div class="animation" id="animated">
+              <ul>
+                <li><a href="#">home</a></li>
+              </ul>
+            </div>
+            <p> smooth effect </p>
+          </div>
+        </div>
+      </div>
+  
+
+
+</body>
+</html>

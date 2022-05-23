@@ -1,0 +1,93 @@
+<!doctypehtml>
+<html>
+<head>
+<style>
+input[type="text"]:hover{
+    background-color: aqua;
+}
+input[type="password"]:focus{
+    background-color: blanchedalmond;
+}
+</style>
+</head>
+<body style="background-color: aqua;">
+<h1 style="text-align: center;"></h1>
+
+     <center>
+
+    <fieldset style="width: 50%;">
+</body>
+
+<form>
+    <fieldset style="width: 70%; background-color: cornflowerblue;">
+    <legend style="color: darkblue; font-weight: bold; background-color: yellow;"> User Information</legend><br> <br>
+First Name::
+<input type="text" id="fname" name="fname"> <br> <br>
+Password::
+<input type="password" id="pswd" name="pswd"> <br> <br>
+
+Email::
+<input type="email" id="email" name="email"> <br> <br>
+    </fieldset>
+    <br> <br>
+    <fieldset style="width: 70%; background-color: brown;">
+        <legend> Personal Data </legend>
+Color::
+<input type="color" id="color" name="color"style="width: 60%;"><br> <br>
+Date::
+<input type="date" id="mydate" name="mydate"style="width: 60%;"><br> <br>
+My File::
+<input type="file" id="myfile" name="myfile"style="width: 65%;">
+    </fieldset>
+    <br> <br>
+
+    <fieldset style="width: 70%; background-color: lightgreen;">
+Month::
+<input type="month" id="my month" name="my month" style="width: 60%;"><br> <br> 
+
+Select the Quantity::
+<input type="number" id="mynum" name="mynum" min="1" max="8"style="width: 55%;"> <br> <br>
+
+Select the Range::
+<input type="range" id="mynum" name="mynum" min="3" max="7"style="width: 55%;"> <br> <br>
+
+Contact Details::
+<input type="tel" id="mynumb" name="mynumb" pattern="[0-9} {3}-[0-9}{2}-[0-9]-{3} style="width: 55%;"><br> <br> <br>
+
+Select the Time::
+<input type="time" id="mynumb" name="mynumb"style="width: 55%;"><br> <br>
+
+Select the Week::
+<input type="week" id="mynumb" name="mynumb"><br><br>
+
+    </fieldset>
+    <br> <br>
+    <fieldset style="width=70%;background-color: lightseagreen;">
+        <legend> Password Verification </legend>
+Password::
+<input type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters"><br> <br>
+
+Password::
+<input type="password" id="pwd" name="pwd" pattern="(?=.\d)(?=.[a-z] ).{8,}" title="Must contain atleast one number and one uppercase and one lowercase letter, and atleast 8 or more characters "><br> <br>
+
+Email::
+<input type="email" id="email" name="email"
+pattern="[a-z0-9._%+-]+@[a-z0-9,-]+\.[a-z]{2,}$">
+<br> <br>
+    </fieldset>
+    <br> <br>
+
+<input type="submit" value="submit">
+<input type="reset"> <br> <br>
+
+
+
+
+
+
+</center>
+</fieldset>
+
+</form>
+</body>
+</html>

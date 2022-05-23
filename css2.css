@@ -1,0 +1,21 @@
+h1{
+    background-image: url(S1.jpg);
+}
+
+h3{
+    color: blue;
+    background-color: chartreuse;
+}
+
+#para{
+    background-color: cadetblue;
+    color: black;
+
+}
+
+#head{
+    background-color: crimson;
+    color: aliceblue;
+    font-weight: bolder;
+    text-align: center;
+}

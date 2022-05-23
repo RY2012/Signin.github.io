@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div{
+    width: 100px;
+    height: 50px;
+    background-color: orange;
+    font-weight: bold;
+    position: relative;
+    animation: myanim 5s infinite;
+}
+
+#D1{
+    animation-timing-function: linear;
+}
+#D2{
+    animation-timing-function: ease;
+}
+
+#D3{
+    animation-timing-function: ease-in;
+}
+
+#D4{
+    animation-timing-function: ease-out;
+}
+
+#D5{
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes myanim{
+from{left: 0px;}
+to{left: 300px;}
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <h1>Animation Timing Function</h1>
+    <div id="D1"> Linear </div>
+    <div id="D2"> Ease </div>
+    <div id="D3"> Ease-In</div>
+    <div id="D4"> Ease-Out</div>
+    <div id="D5"> Ease-In-Out </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    height: 100vh;
+    align-items: center;
+    background-color: #06111c;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.collumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.animation {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-family: sans-serif;
+    width: max-content;
+}
+.underline {
+    font-weight: bold;
+    color: #057AFF;
+}
+
+
+/*transition - duration examples*/
+ul {
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+ul li a {
+    color: #FCD63F;
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    position: relative;
+    transition: all .5s
+}
+
+#no-time ul li a {
+    transition: all 0s;
+}
+
+a:hover {
+    background-color: #FCD63F;
+    color: #06111c;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #FCD63F;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all 0.3s
+}
+
+#no-time a:before {
+    transition: all 0s;
+}
+
+a:hover:before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #FCD63F;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+#no-time a:after {
+    transition: all 0s;
+}
+
+a:hover:after {
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
+
+/*animation - delay examples*/
+.container {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    animation: animate 1s linear infinite;
+    transform: rotate(45deg);
+}
+
+.container span {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    animation: rotate 1s linear infinite
+}
+
+.container span:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-color: #FCEBA7;
+}
+
+.container span:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #55DDB9;
+}
+
+.container span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: #FD6C64;
+}
+
+.container span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    background-color: #1F78B0;
+}
+
+#with-delay .container span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#with-delay .container span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#with-delay .container span:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    90% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        width: 90px;
+        height: 90px;
+    }
+    10% {
+        width: 90px;
+        height: 90px;
+    }
+    50% {
+        width: 130px;
+        height: 130px;
+    }
+    90% {
+        width: 90px;
+        height: 90px;
+    }
+    100% {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="row">
+        <div class="collumn">
+          <div class="row" id="transition2">
+            <div class="collumn">
+              <div class="animation" id="no-time">
+                <ul>
+                  <li><a href="#">home</a></li>
+                </ul>
+              </div>
+              <p>transition: all <span class="underline">0s</span> linear 0s</p>
+            </div>
+            <div class="collumn">
+              <div class="animation">
+                <ul>
+                  <li><a href="#">home</a></li>
+                </ul>
+              </div>
+              <p>
+                transition: all <span class="underline">0.5s</span> linear 0s
+              </p>
+            </div>
+          </div>
+        </div>
+        
+</div>
+<div class="row">
+  <div class="collumn">
+          <div class="row" id="animation2">
+            <div class="collumn">
+              <div class="animation">
+                <div class="container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>
+                animation: rotate 1s linear infinite
+                <span class="underline">0s</span>
+              </p>
+            </div>
+            <div class="collumn">
+              <div class="animation" id="with-delay">
+                <div class="container">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <p>
+                animation: rotate 1s linear infinite
+                <span class="underline">0.1s</span>
+              </p>
+            </div>
+          </div>
+        </div>
+</div>
+
+
+
+
+</body>
+</html>

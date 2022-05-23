@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source +Sans+Pro:200,400');
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Playfair Display', serif;
+}
+
+p,a{
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    background-color: goldenrod;
+    text-decoration: none;
+    color: white;
+    border-radius: 25rem;
+    display: inline-block;
+    transition: all .3s;
+}
+
+a:hover{
+    opacity: 6;
+}
+
+.hero{
+    background: url('data:image/jpeg;base64,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');
+    background-size: cover;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+    align-items: center;
+}
+
+.hero > *{
+    color: white;
+}
+
+.hero > h1{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+.hero > article > p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.hero > article > a{
+    padding: 1rem;
+    margin-top: 75rem;
+}
+
+.breweries{
+    padding: 2rem;
+}
+
+.breweries > ul{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit,minmax(320px, 1fr));
+    grid-gap: 1rem;
+
+}
+
+.breweries > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.breweries > ul > li > figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+}
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.25rem;
+}
+
+.breweries > ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+
+.breweries > ul > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+}
+
+
+footer {
+  background-color: #333;
+  padding: .75rem;
+  color: white;
+  text-align: center;
+  font-size: .75rem;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<main class="wrapper">
+    <section class="hero">
+        <h1>You thirsty?</h1>
+        <article>
+            <p>Explore local breweries with just one click and stirred by straight across the centuries light years great turbulent clouds circumnavigated paroxysm of global death</p>
+        <a href="#breweries">Browse Breweries</a>
+        
+        </article>
+    </section>
+    <section class="breweries" id="breweries">
+        <ul>
+            <li>
+                <figure>
+                    <img src="https://thumbs.dreamstime.com/b/two-mugs-beer-wheat-wooden-table-52155843.jpg" alt="Several hands holding beer glasses">
+
+                    <figcaption><h3>Billions Upon billions </h3></figcaption>
+               
+
+               
+                </figure>
+                <p>
+                    Made in the interiors of collapsing stars stuff harvesting star light venture billions upon billions Drake Equation brain is the seed of intelligence?
+                </p>
+
+                <a href="">Visit Website</a>
+
+            </li>
+
+            
+            <li>
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJWWeLYAbmXc3J4WNTIpFtuXdV4m7k-Ls8g&usqp=CAU" alt=" Several friends doing a toast">
+
+                    <figcaption><h3>Dake equation</h3></figcaption>
+               
+
+               
+                </figure>
+                <p>
+                Another world citizens of distant epochs from which we bring descended from astronomers Orion's sword shores of the cosmic ocean@
+                </p>
+
+                <a href="">Visit Website</a>
+
+            </li>
+
+
+
+            <li>
+                <figure>
+                    <img src="https://www.gannett-cdn.com/media/2019/05/17/USATODAY/usatsports/31-biggest-beer-brands-in-america.jpg?crop=1365,768,x0,y0&width=1365&height=682&format=pjpg&auto=webp" alt="Three different glasses of beer">
+
+                    <figcaption><h3> Vast cosmic arena </h3></figcaption>
+               
+
+               
+                </figure>
+                <p>
+                 Galaxies the ash of stellar alchemy prime number science inconspicious motes of rock and gas brain is the seed of intelligence
+                </p>
+
+                <a href="">Visit Website</a>
+
+            </li>
+
+
+
+            </ul>
+
+            </section>
+
+            </main>
+
+            <footer>
+                <p>&copy;2019.Made with &hearts; and CSS Grid</p>
+            </footer>
+           
+        </ul>
+    </section>
+</main>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html>
+<head>
+
+<style>
+div{
+    width:100px;
+    height:100px;
+    border:2px soild red;
+    border-radius:50px;
+    background-color: blueviolet;
+    transition: width 2s;
+}
+
+div:hover{
+    width:300px;
+}
+
+#linear{
+    transition-timing-function: linear;
+}
+
+#ease{
+    transition-timing-function: ease;
+}
+
+#ease-in{
+    transition-timing-function: ease-in;
+}
+
+#ease-out{
+    transition-timing-function: ease-out;
+}
+
+#ease-in-out{
+    transition-timing-function: ease-in-out;
+}
+</style>
+
+</head>
+
+<body>
+<h1> CSS Transitions Animation Functions</h1>
+
+<div id="linear">Linear</div> <br>
+
+<div id="ease">Ease</div> <br>
+
+<div id="ease-in">Ease-In</div> <br>
+
+<div id="ease-out">Ease-Out</div> <br>
+
+<div id="ease-in-out">Ease-In-Out</div> <br>
+
+</body>
+
+</html>

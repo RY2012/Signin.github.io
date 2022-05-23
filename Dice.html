@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.first-face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-face{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.second-face .s1:nth-of-type(2){
+    
+    align-self: flex-end;
+
+}
+
+.third-face{
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-face, .s1:nth-of-type(2){
+    
+    align-self: center;
+
+}
+
+.third-face, .s1:nth-of-type(3){
+    align-self: flex-end;
+}
+
+.fourth-face, .sixth-face
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth-face .column, .sixth-face .column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-face .column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2){
+
+    justify-content: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    align-content: center;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    background: linear-gradient(top, red,green);
+}
+
+[class$="face"]{
+    
+    margin: 16px;
+    padding: 4px;
+    background-color: green;
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+    box-shadow: inset 0 5px green,inset 0 -5px lightcoral, inset 5px 0 lightseagreen, inset -5px 0 orange;
+    border-radius: 10%;
+    
+   
+}
+
+
+
+.s1{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: darkblue;
+    box-shadow: inset 0 3px darkorchid,
+    inset 0 -3px darkgoldenrod ;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="first-face">
+    <span class="s1"></span>
+</div>
+
+<div class="second-face">
+    <span class="s1"></span>
+    <span class="s1"></span>
+</div>
+
+<div class="third-face">
+    <span class="s1"></span>
+    <span class="s1"></span>
+    <span class="s1"></span>
+</div>
+
+<div class="fourth-face">
+   <div class="column">
+    <span class="s1"></span>
+    <span class="s1"></span>
+   </div>
+    
+   <div class="column">
+    <span class="s1"></span>
+    <span class="s1"></span>
+   </div>
+
+</div>
+ 
+<div class="fifth-face">
+    <div class="column">
+     <span class="s1"></span>
+     <span class="s1"></span>
+    </div>
+    <div class="column">
+    <span class="s1"></span>
+</div>
+
+<div class="column">
+    <span class="s1"></span>
+    <span class="s1"></span>
+</div>
+ </div>
+
+<div class="sixth-face">
+    <div class="column">
+        <span class="s1"></span>
+        <span class="s1"></span>
+        <span class="s1"></span>
+    </div>
+
+    <div class="column">
+        <span class="s1"></span>
+        <span class="s1"></span>
+        <span class="s1"></span>
+    </div>
+
+
+</div>
+</div>
+</body>
+</html>

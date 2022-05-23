@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+.ball1{
+    text-indent: 1px;
+    width: 100px;
+    height: 100px;
+    background-color:  aquamarine;
+    border-radius: 50%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    text-align: center;
+    color: red;
+    animation:  ball 8s infinite alternate-reverse;
+}
+
+@keyframes ball{
+    0%{transform: rotate(360deg);
+    top:0%;
+    right:93%;
+animation-timing-function: ease-in;}
+
+12.5%{
+    right: 93%;
+    top: 82%;
+    animation-timing-function: ease-out;
+}
+
+25%{
+    right: 77%;
+    top: 20%;
+    animation-timing-function: ease-in;
+}
+
+37%{
+    right: 62%;
+    top: 82%;
+    animation-timing-function: ease-out;
+}
+
+50%{
+    right: 46%;
+    top: 38%;
+    animation-timing-function: ease-in;
+}
+
+62%{
+    right: 31%;
+    top: 82%;
+    animation-timing-function: ease-out;
+}
+
+75%{
+    right: 15%;
+    top: 47%;
+    animation-timing-function: ease-in;
+}
+
+
+100%{
+    right:0%;
+    top: 82%;
+}
+
+
+
+
+}
+
+</style>    
+
+
+</head>
+<body>
+
+    <div class="ball1">
+        <p>Hit Me</p>
+    </div>
+
+
+
+
+</body>
+</html>
